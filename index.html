@@ -3,7 +3,7 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		5
+		6
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
@@ -28,31 +28,12 @@
 				finalData=data.val();
 				keys=Object.keys(finalData);
 				for(var x=0;x<keys.length;x++){
-					if(finalData[x].area !=null){
-						areas.push(finalData[x].area);
-					}else{
-						areas.push("");
-					}
-					if(finalData[x].hostname !=null){
-						hostNames.push(finalData[x].hostname);
-					}else{
-						hostNames.push("");
-					}
-					if(finalData[x].uptime !=null){
-						upTimes.push(finalData[x].uptime);
-					}else{
-						upTimes.push("");
-					}
-					if(finalData[x].version !=null){
-						versions.push(finalData[x].version);
-					}else{
-						versions.push("");
-					}				
+					try{areas.push(finalData[x].area);}catch(err){areas.push("");}
+					try{hostNames.push(finalData[x].hostname);}catch(err){hostNames.push("");}
+					try{upTimes.push(finalData[x].uptime);}catch(err){upTimes.push("");}
+					try{versions.push(finalData[x].version);}catch(err){versions.push("");}
 				}
 				console.log(areas);
-				console.log(hostNames);
-				console.log(upTimes);
-				console.log(versions);
 			}
 			function dataException(err){
 				console.log(err);
