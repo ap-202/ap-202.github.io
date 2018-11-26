@@ -3,7 +3,7 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		Testing v2...
+		Testing...
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
 			
@@ -15,9 +15,19 @@
 			storageBucket: "gs://bloomberg-project.appspot.com",
 		  };
 		  firebase.initializeApp(config);
+		  var databaseInstance=firebase.database();
+
+			function dataRetreived(data){
+				console.log(data.val());
+			}
+
+			function dataException(err){
+				console.log(err);
+			}
+			var ref=database.ref('area' , dataRetreived, dataException)
 		</script>	
 		
-		<script src="/ReadData.js"></script>
+		<!--<script src="/ReadData.js"></script>-->
 		
 		<p></p>
 	
