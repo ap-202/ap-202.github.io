@@ -27,7 +27,7 @@
 				console.log(data.val());
 				finalData=data.val();
 				keys=Object.keys(finalData);
-				for(int x=0;x<keys.length;x++){
+				for(var x=0;x<keys.length;x++){
 					areas.push(finalData[x].area);
 					hostNames.push(finalData[x].hostname);
 					upTimes.push(finalData[x].uptime);
