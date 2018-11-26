@@ -27,10 +27,12 @@
 				console.log(data.val());
 				finalData=data.val();
 				keys=Object.keys(finalData);
-				areas=finalData.area;
-				hostNames=finalData.hostname;
-				upTimes=finalData.uptime;
-				versions=finalData.version;
+				for(int x=0;x<keys.length;x++){
+					areas.push(finalData[x].area);
+					hostNames.push(finalData[x].hostname);
+					upTimes.push(finalData[x].uptime);
+					versions.push(finalData[x].version);
+				}
 				console.log(areas);
 			}
 			function dataException(err){
