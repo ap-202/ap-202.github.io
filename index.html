@@ -1,9 +1,9 @@
 <html>
-		3
+
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		
+		4
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
@@ -28,10 +28,26 @@
 				finalData=data.val();
 				keys=Object.keys(finalData);
 				for(var x=0;x<keys.length;x++){
-					areas.push(finalData[x].area);
-					//hostNames.push(finalData[x].hostname);
-					//upTimes.push(finalData[x].uptime);
-					//versions.push(finalData[x].version);
+					if(finalData[x].area !=null){
+						areas.push(finalData[x].area);
+					}else{
+						areas.push("");
+					}
+					if(finalData[x].hostname !=null){
+						hostNames.push(finalData[x].hostname);
+					}else{
+						hostNames.push("");
+					}
+					if(finalData[x].uptime !=null){
+						upTimes.push(finalData[x].uptime);
+					}else{
+						areas.push("");
+					}
+					if(finalData[x].version !=null){
+						versions.push(finalData[x].version);
+					}else{
+						hostNames.push("");
+					}				
 				}
 				console.log(areas);
 			}
