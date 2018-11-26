@@ -19,6 +19,16 @@
 			};
 			firebase.initializeApp(config);
 			var databaseInstance = firebase.database();
+			var databaseReference = databaseInstance.ref("area");
+			databaseReference.on("value", dataRetrieved, dataException);
+			  
+			function dataRetrieved(data){
+				console.log(data.val());
+			}
+			
+			function dataException(err){
+				console.log(err);
+			}
 
 		 
 		</script>
