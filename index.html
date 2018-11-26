@@ -16,7 +16,9 @@
 		  };
 		  firebase.initializeApp(config);
 		  var databaseInstance=firebase.database();
-		  var ref=databaseInstance.ref('area' , dataRetreived, dataException)
+		  var dataReference=databaseInstance.ref('area');
+		  dataReference.on('value', dataRetreived, dataException);
+		  
 			function dataRetreived(data){
 				console.log(data.val());
 			}
