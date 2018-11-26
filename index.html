@@ -3,9 +3,8 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		Testing...v5
+		Testing...v1
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-	
 
 		<script>
 		 
@@ -18,6 +17,7 @@
 				messagingSenderId: "267927372179"
 			};
 			firebase.initializeApp(config);
+			console.log(firebase);
 			var databaseInstance = firebase.database();
 			var databaseReference = databaseInstance.ref("area");
 			databaseReference.on("value", dataRetrieved, dataException);
@@ -29,7 +29,6 @@
 			function dataException(err){
 				console.log(err);
 			}
-
 		 
 		</script>
 		
