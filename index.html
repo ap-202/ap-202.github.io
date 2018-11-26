@@ -3,7 +3,7 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		Testing...v2
+		Testing...v23
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 
 		<script>
@@ -23,7 +23,7 @@
 			databaseReference.on("value", dataRetrieved, dataException);
 			  
 			function dataRetrieved(data){
-				console.log(data);
+				console.log(data.val());
 			}
 			
 			function dataException(err){
