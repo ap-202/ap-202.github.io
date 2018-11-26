@@ -3,9 +3,9 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		Testingv5...
+		Testing...
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-
+		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
 			
 		<script>
 		  var config = {
@@ -16,7 +16,7 @@
 		  };
 		  firebase.initializeApp(config);
 		  var databaseInstance=firebase.database();
-
+		  var ref=databaseInstance.ref('area' , dataRetreived, dataException)
 			function dataRetreived(data){
 				console.log(data.val());
 			}
@@ -24,7 +24,7 @@
 			function dataException(err){
 				console.log(err);
 			}
-			var ref=database.ref('area' , dataRetreived, dataException)
+			
 		</script>	
 		
 		<!--<script src="/ReadData.js"></script>-->
