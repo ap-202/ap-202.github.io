@@ -3,20 +3,33 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		Testing...v1
+		Testing...v2
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+
 		<script>
 		 
-		  var config = {
-			apiKey: "AIzaSyDj3WmU4bQvtI65DYOlllFIv3-alBXYi0E",
-			authDomain: "bloomberg-project.firebaseapp.com",
-			databaseURL: "https://bloomberg-project.firebaseio.com",
-			projectId: "bloomberg-project",
-			storageBucket: "bloomberg-project.appspot.com",
-			messagingSenderId: "267927372179"
-		  };
-		  firebase.initializeApp(config);
-		  console.log(firebase);
+			var config = {
+				apiKey: "AIzaSyDj3WmU4bQvtI65DYOlllFIv3-alBXYi0E",
+				authDomain: "bloomberg-project.firebaseapp.com",
+				databaseURL: "https://bloomberg-project.firebaseio.com",
+				projectId: "bloomberg-project",
+				storageBucket: "bloomberg-project.appspot.com",
+				messagingSenderId: "267927372179"
+			};
+			firebase.initializeApp(config);
+			var databaseInstance = firebase.database();
+			var databaseReference = databaseInstance.ref("area");
+			databaseReference.on("value", dataRetrieved, dataException);
+			  
+			function dataRetrieved(data){
+				console.log(data.val());
+			}
+			
+			function dataException(err){
+				console.log(err);
+			}
+		 
 		</script>
 		
 		<p></p>
