@@ -3,11 +3,13 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		Testing...v23
+		
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
 
 		<script>
-		 
+			var areas; var hostnames; var upTimes; var versions; var finalData; var keys;
 			var config = {
 				apiKey: "AIzaSyDj3WmU4bQvtI65DYOlllFIv3-alBXYi0E",
 				authDomain: "bloomberg-project.firebaseapp.com",
@@ -21,15 +23,19 @@
 			var databaseInstance = firebase.database();
 			var databaseReference = databaseInstance.ref();
 			databaseReference.on("value", dataRetrieved, dataException);
-			  
 			function dataRetrieved(data){
 				console.log(data.val());
+				finalData=data.val();
+				keys=Object.keys(finalData);
+				areas=finalData.area;
+				hostNames=finalData.hostname;
+				upTimes=finalData.uptime;
+				versions=finalData.version;
+				console.log(areas);
 			}
-			
 			function dataException(err){
 				console.log(err);
 			}
-		 
 		</script>
 		
 		<p></p>
