@@ -1,7 +1,28 @@
 <html>
 
+	<Title>Bloomberg Data</Title>
+
 	<body>
 		Testing...
+		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+			
+		<script>
+		  var config = {
+			apiKey: "apiKey",
+			authDomain: "bloomberg-project.firebaseapp.com",
+			databaseURL: "https://bloomberg-project.firebaseio.com/",
+			storageBucket: "bucket.appspot.com",
+		  };
+		  firebase.initializeApp(config);
+		</script>	
+		
+		<script src="/ReadData.js"></script>
+		
+		<p></p>
+	
+		<noscript>Get a new computer</noscript>
+		
 	</body>
 
 </html>
