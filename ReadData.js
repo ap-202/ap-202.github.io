@@ -29,20 +29,20 @@ function dataRetrieved(data){
 	console.log(versions);
 	
 	for(var y=0;y<keys.length;y++){
-		finalData2.push([areas[y]],[hostNames[y]],[upTimes[y]],[versions[y]]);
+		finalData2.push(areas[y],hostNames[y],upTimes[y],versions[y]);
 	}
 	console.log(finalData2);
 	$(document).ready(function() {
-    $('#table1').DataTable( {
-        data: finalData2,
-        columns: [
-            { title: "area" },
-            { title: "hostname" },
-            { title: "uptime" },
-            { title: "version" }
-        ]
-    } );
-} );
+	    $('#table1').DataTable( {
+		data: finalData2,
+		columns: [
+		    { title: "area" },
+		    { title: "hostname" },
+		    { title: "uptime" },
+		    { title: "version." }
+		]
+	    } );
+	} );
 }
 function dataException(e){
 	console.log(e);
