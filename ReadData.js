@@ -31,8 +31,8 @@ function dataRetrieved(data){
 	for(var y=0;y<keys.length;y++){
 		finalData2.push([areas[y]],[hostNames[y]],[upTimes[y]],[versions[y]]);
 	}
-	
-	$(document).ready(function() {
+	console.log(finalData2);
+/*	$(document).ready(function() {
     $('#table1').DataTable( {
         data: finalData2,
         columns: [
@@ -42,7 +42,7 @@ function dataRetrieved(data){
             { title: "version" }
         ]
     } );
-} );
+} );*/
 }
 function dataException(e){
 	console.log(e);
