@@ -3,45 +3,16 @@
 	<Title>Bloomberg Data</Title>
 
 	<body>
-		10
+
 		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
-
-		<script>
-			var areas=[]; var hostNames=[]; var upTimes=[]; var versions=[]; var finalData; var keys;
-			var config = {
-				apiKey: "AIzaSyDj3WmU4bQvtI65DYOlllFIv3-alBXYi0E",
-				authDomain: "bloomberg-project.firebaseapp.com",
-				databaseURL: "https://bloomberg-project.firebaseio.com",
-				projectId: "bloomberg-project",
-				storageBucket: "bloomberg-project.appspot.com",
-				messagingSenderId: "267927372179"
-			};
-			firebase.initializeApp(config);
-			console.log(firebase);
-			var databaseInstance = firebase.database();
-			var databaseReference = databaseInstance.ref();
-			databaseReference.on("value", dataRetrieved, dataException);
-			function dataRetrieved(data){
-				console.log(data.val());
-				finalData=data.val();
-				keys=Object.keys(finalData);
-				for(var x=0;x<keys.length;x++){
-					try{areas.push(finalData[x].area);}catch(e){console.log(e);areas.push("");}
-					try{hostNames.push(finalData[x].hostname);}catch(e){console.log(e);hostNames.push("");}
-					try{upTimes.push(finalData[x].uptime);}catch(e){console.log(e);upTimes.push("");}
-					try{versions.push(finalData[x].version);}catch(e){console.log(e);versions.push("");}
-				}
-				console.log(areas);
-				console.log(hostNames);
-				console.log(upTimes);
-				console.log(versions);
-			}
-			function dataException(e){
-				console.log(e);
-			}
-		</script>
+		<link rel ="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" type="text/css"></link>
+		<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
+		 
+		<script src="ReadData.js"></script>
 		
 		<p></p>
 	
