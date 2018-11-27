@@ -12,12 +12,15 @@ console.log(firebase);
 var databaseInstance = firebase.database();
 var databaseReference = databaseInstance.ref();
 databaseReference.on("value", dataRetrieved, dataException);
+var finalData2=[];
 function dataRetrieved(data){
 	console.log(data.val());
 	finalData=data.val();
 	keys=Object.keys(finalData);
-/*	for(var x=0;x<keys.length;x++){
-		try{areas.push(finalData[x].area);}catch(e){console.log(e);areas.push("");}
+	for(var x=0;x<keys.length;x++){
+		finalData2.push([finalData[x].area,finalData[x].hostname,finalData[x].uptime,finalData[x].version]);
+	}
+		/*try{areas.push(finalData[x].area);}catch(e){console.log(e);areas.push("");}
 		try{hostNames.push(finalData[x].hostname);}catch(e){console.log(e);hostNames.push("");}
 		try{upTimes.push(finalData[x].uptime);}catch(e){console.log(e);upTimes.push("");}
 		try{versions.push(finalData[x].version);}catch(e){console.log(e);versions.push("");}
@@ -26,9 +29,10 @@ function dataRetrieved(data){
 	console.log(hostNames);
 	console.log(upTimes);
 	console.log(versions);*/
+	console.log(finalData2);
 	$(document).ready(function() {
     $('#table1').DataTable( {
-        data: finalData,
+        data: finalData2,
         columns: [
             { title: "area" },
             { title: "hostname" },
