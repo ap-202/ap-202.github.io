@@ -35,6 +35,7 @@ function dataRetrieved(data){
 	$(document).ready(function() {
 	    $('#table1').DataTable( {
 		data: finalData2,
+		"ordering":false
 		columns: [
 		    { title: "area" },
 		    { title: "hostname" },
