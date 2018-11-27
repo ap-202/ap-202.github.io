@@ -30,7 +30,7 @@ function dataRetrieved(data){
 	
 	for(var y=0;y<keys.length;y++){
 		finalData2.push([areas[y]],[hostNames[y]],[upTimes[y]],[versions[y]]);
-		log.console("1");
+		console.log("1");
 	}
 	console.log(finalData2);
 	$(document).ready(function() {
