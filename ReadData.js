@@ -28,7 +28,7 @@ function dataRetrieved(data){
 	console.log(upTimes);
 	console.log(versions);
 	
-	for(var y=0;y<keys.length;y++){
+	for(var y=0;y<keys.length-1;y++){
 		finalData2.push([areas[y],hostNames[y],upTimes[y],versions[y]]);
 	}
 	console.log(finalData2);
