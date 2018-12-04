@@ -54,7 +54,7 @@ function dataRetrieved(data){
 	$(document).ready(function() {
 	    $("#table1").DataTable( {
 		data: tableData,
-		"ordering": false,
+		//"ordering": false,
 		columns: [
 		    { title: "area" },
 		    { title: "hostname" },
