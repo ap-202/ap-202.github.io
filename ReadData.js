@@ -17,7 +17,8 @@ var config = {
 
 firebase.initializeApp(config);
 console.log(firebase);
-var databaseInstance = firebase.database();var databaseReference = databaseInstance.ref();
+var databaseInstance = firebase.database();
+var databaseReference = databaseInstance.ref();
 databaseReference.on("value", dataRetrieved, dataException);
 
 function dataRetrieved(data){
