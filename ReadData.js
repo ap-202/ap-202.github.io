@@ -35,10 +35,15 @@ function dataRetrieved(data){
 			   console.log(e);
 			   areas.push("");
 		   }
+		try{
 			if(finalData[x].hostname != undefined)
-				hostnames.push(finalData[x].hostname);
+				hostNames.push(finalData[x].hostname);
 			else
-				hostnames.push("");
+				hostNames.push("");
+		   }catch(e){
+			   console.log(e);
+			   hostNames.push("");
+		   }
 		try{
 			if(finalData[x].uptime != undefined)
 				upTimes.push(finalData[x].uptime);
