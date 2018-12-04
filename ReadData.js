@@ -47,7 +47,7 @@ function dataRetrieved(data){
 		   }
 	}
 	console.log(areas);console.log(hostNames);console.log(upTimes);console.log(versions);
-	for(var y=0;y<keys.length-1;y++){
+	for(var y=0;y<keys.length;y++){
 		tableData.push([areas[y],hostNames[y],upTimes[y],versions[y]]);
 	}
 	console.log(tableData);
