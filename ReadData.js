@@ -26,22 +26,38 @@ function dataRetrieved(data){
 	finalData=data.val();
 	keys=Object.keys(finalData);
 	for(var x=0;x<keys.length;x++){
-		try{areas.push(finalData[x].area);
+		try{
+			if(finalData[x].area != undefined)
+				areas.push(finalData[x].area);
+			else
+				areas.push("");
 		   }catch(e){
 			   console.log(e);
 			   areas.push("");
 		   }
-		try{hostNames.push(finalData[x].hostname);
+		try{
+			if(finalData[x].hostname != undefined)
+				hostnames.push(finalData[x].hostname);
+			else
+				hostnames.push("");
 		   }catch(e){
 			   console.log(e);
 			   hostNames.push("");
 		   }
-		try{upTimes.push(finalData[x].uptime);
+		try{
+			if(finalData[x].uptime != undefined)
+				upTimes.push(finalData[x].uptime);
+			else
+				upTimes.push("");
 		   }catch(e){
 			   console.log(e);
 			   upTimes.push("");
 		   }
-		try{versions.push(finalData[x].version);
+		try{
+			if(finalData[x].version != undefined)
+				versions.push(finalData[x].version);
+			else
+				versions.push("");
 		   }catch(e){
 			   console.log(e);
 			   versions.push("");
