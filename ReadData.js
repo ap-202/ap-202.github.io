@@ -75,7 +75,7 @@ function dataException(e){
 	
 	console.log(e);
 	$(document).ready(function(){
-		var finalData = JSON.parse($.getJSON("SBHSData.json));
+		var finalData = JSON.parse($.getJSON("SBHSData.json"));
 		
 	});
 	 
