@@ -135,6 +135,6 @@ function averageGraph(areas,upTimes){
 	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
 		type:"doughnut",
 		data:data,
-		options: options
+		options:{}
 	});
 }
