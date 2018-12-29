@@ -17,7 +17,8 @@ var config = {
 
 firebase.initializeApp(config);
 console.log(firebase);
-var databaseInstance = firebase.database();var databaseReference = databaseInstance.ref();
+var databaseInstance = firebase.database();
+var databaseReference = databaseInstance.ref();
 databaseReference.on("value", dataRetrieved, dataException);
 
 function dataRetrieved(data){
@@ -54,7 +55,16 @@ function dataRetrieved(data){
 	console.log(upTimes);
 	console.log(versions);
 	
-	for(var y=0;y<keys.length;y++){tableData.push([areas[y],hostNames[y],upTimes[y],versions[y]]);}
+	//2D Array -->(area, hostname, uptime, version)
+	for(var y=0;y<keys.length;y++){
+		tableData.push([
+			areas[y],
+			hostNames[y],
+			upTimes[y],
+			versions[y]
+		]);
+	}
+
 	console.log(tableData);
 	
 	//Create Datatable 
