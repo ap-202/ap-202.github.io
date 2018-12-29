@@ -82,14 +82,8 @@ function dataRetrieved(data){
 	averageGraph(areas,upTimes);
 	
 }
-function dataException(e){
-	
-	console.log(e);
-/*	$(document).ready(function(){
-		var finalData = JSON.parse($.getJSON("SBHSData.json"));
-		
-	});*/
-	 
+function dataException(e){	
+	console.log(e);	 
 }
 function averageGraph(areas,upTimes){
 	var temp=[];
@@ -140,6 +134,7 @@ function averageGraph(areas,upTimes){
 	}
 	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
 		type:"doughnut",
-		data:data
+		data:data,
+		options: options
 	});
 }
