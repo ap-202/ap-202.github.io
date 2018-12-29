@@ -85,8 +85,12 @@ function dataRetrieved(data){
 	var counts=[0,0,0,0,0,0,0,0,0,0,0];
 	var gdata=[];
 	for(var x=0;x<areas.length;x++){
-		var hold = parseInt(upTimes[x])
-		temp.push(hold);
+		if(upTimes[x] != ""){
+			var hold = parseInt(upTimes[x])
+			temp.push(hold);
+		}else{
+			temp.push(0);
+		}
 	}
 	for(var y=0;y<areas.length;y++){
 		if(areas[y]!=undefined){
