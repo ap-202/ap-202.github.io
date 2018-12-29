@@ -137,7 +137,7 @@ function averageGraph(areas,upTimes){
 	for(var x=0;x<sums.length;x++){
 		data.push((sums[x]/counts[x]));
 	}
-	var graph = (document.getElementById(("graph1").getContext('2d')),{
+	var graph = (document.getElementById("graph1").getContext('2d'),{
 		type:"doughnut",
 		data:data
 	});
