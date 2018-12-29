@@ -95,7 +95,7 @@ function averageGraph(areas,upTimes){
 		temp.push(hold);
 	}
 	for(var y=0;y<areas.length;y++){
-		if(areas[x].localeCompare){
+		if(areas[x].localeCompare('1')==0){
 			sums[0]+=temp[x];
 			counts[0]+=1;
 		}else if(areas[x]==('admin')){
