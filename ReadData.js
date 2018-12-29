@@ -79,7 +79,13 @@ function dataRetrieved(data){
 		]
 	    } );
 	} );
-	averageGraph(areas,upTimes);
+	var test=[1,2,3,4,5];
+	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
+		type:"doughnut",
+		data:test,
+		options:{}
+	});
+	//averageGraph(areas,upTimes);
 	
 }
 function dataException(e){	
@@ -132,10 +138,5 @@ function averageGraph(areas,upTimes){
 	for(var x=0;x<sums.length;x++){
 		data.push((sums[x]/counts[x]));
 	}
-	var test=[1,2,3,4,5];
-	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
-		type:"doughnut",
-		data:test,
-		options:{}
-	});
+
 }
