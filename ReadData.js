@@ -89,41 +89,41 @@ function dataRetrieved(data){
 		temp.push(hold);
 	}
 	for(var y=0;y<areas.length;y++){
-		if(areas[x]!=undefined){
-			console.log(areas[x]);
-			console.log(temp[x]);
-			if(areas[x]==('1')){
-				sums[0]+=temp[x];
+		if(areas[y]!=undefined){
+			console.log(areas[y]);
+			console.log(temp[y]);
+			if(areas[y]==('1')){
+				sums[0]+=temp[y];
 				counts[0]+=1;
-			}else if(areas[x]==('admin')){
-				sums[1]+=temp[x];
+			}else if(areas[y]==('admin')){
+				sums[1]+=temp[y];
 				counts[1]+=1;
-			}else if(areas[x]==('apex')){
-				sums[2]+=temp[x];
+			}else if(areas[y]==('apex')){
+				sums[2]+=temp[y];
 				counts[2]+=1;
-			}else if(areas[x]==('bcloud')){
-				sums[3]+=temp[x];
+			}else if(areas[y]==('bcloud')){
+				sums[3]+=temp[y];
 				counts[3]+=1;
-			}else if(areas[x]==('corp')){
-				sums[4]+=temp[x];
+			}else if(areas[y]==('corp')){
+				sums[4]+=temp[y];
 				counts[4]+=1;
-			}else if(areas[x]==('dev')){
-				sums[5]+=temp[x];
+			}else if(areas[y]==('dev')){
+				sums[5]+=temp[y];
 				counts[5]+=1;
-			}else if(areas[x]==('feed')){
-				sums[6]+=temp[x];
+			}else if(areas[y]==('feed')){
+				sums[6]+=temp[y];
 				counts[6]+=1;
-			}else if(areas[x]==('inet')){
-				sums[7]+=temp[x];
+			}else if(areas[y]==('inet')){
+				sums[7]+=temp[y];
 				counts[7]+=1;
-			}else if(areas[x]==('prod')){
-				sums[8]+=temp[x];
+			}else if(areas[y]==('prod')){
+				sums[8]+=temp[y];
 				counts[8]+=1;
-			}else if(areas[x]==('storage')){
-				sums[9]+=temp[x];
+			}else if(areas[y]==('storage')){
+				sums[9]+=temp[y];
 				counts[9]+=1;
-			}else if(areas[x]==('tdmz')){
-				sums[10]+=temp[x];
+			}else if(areas[y]==('tdmz')){
+				sums[10]+=temp[y];
 				counts[10]+=1;
 			}	
 		}
