@@ -79,14 +79,66 @@ function dataRetrieved(data){
 		]
 	    } );
 	} );
+	averageGraph(areas,upTimes);
 	
 }
 function dataException(e){
 	
 	console.log(e);
-	$(document).ready(function(){
+/*	$(document).ready(function(){
 		var finalData = JSON.parse($.getJSON("SBHSData.json"));
 		
-	});
+	});*/
 	 
+}
+function averageGraph(areas,upTimes){
+	var temp=[];
+	var sums=[];
+	var counts=[];
+	for(var x=0;x<areas.length;x++){
+		temp.push(parseInt(upTimes[x]));
+	}
+	for(var y=0;y<areas.length;y++){
+		if(areas[x].equals("1")){
+			sums[0]+=temp[x];
+			counts[0]+=1;
+		}else if(areas[x].equals("admin")){
+			sums[1]+=temp[x];
+			counts[1]+=1;
+		}else if(areas[x].equals("apex")){
+			sums[2]+=temp[x];
+			counts[2]+=1;
+		}else if(areas[x].equals("bcloud")){
+			sums[3]+=temp[x];
+			counts[3]+=1;
+		}else if(areas[x].equals("corp")){
+			sums[4]+=temp[x];
+			counts[4]+=1;
+		}else if(areas[x].equals("dev")){
+			sums[5]+=temp[x];
+			counts[5]+=1;
+		}else if(areas[x].equals("feed")){
+			sums[6]+=temp[x];
+			counts[6]+=1;
+		}else if(areas[x].equals("inet")){
+			sums[7]+=temp[x];
+			counts[7]+=1;
+		}else if(areas[x].equals("prod")){
+			sums[8]+=temp[x];
+			counts[8]+=1;
+		}else if(areas[x].equals("storage")){
+			sums[9]+=temp[x];
+			counts[9]+=1;
+		}else if(areas[x].equals("tdmz")){
+			sums[10]+=temp[x];
+			counts[10]+=1;
+		}
+		for(var x=0;x<sums.length;x++){
+			data.push((sums[x]/counts[x]));
+		}
+	}
+	var graph = (document.getElementById(("graph1").getContext("2d")),{
+		type:"doughnut",
+		data:data
+	});
 }
