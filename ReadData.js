@@ -79,13 +79,7 @@ function dataRetrieved(data){
 		]
 	    } );
 	} );
-	var test=[1,2,3,4,5];
-	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
-		type:"doughnut",
-		data:test,
-		options:{}
-	});
-	//averageGraph(areas,upTimes);
+	averageGraph(areas,upTimes);
 	
 }
 function dataException(e){	
@@ -138,5 +132,22 @@ function averageGraph(areas,upTimes){
 	for(var x=0;x<sums.length;x++){
 		data.push((sums[x]/counts[x]));
 	}
-
+	var test=[1,2,3,4,5,6,7,8,9,10,11];
+	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
+		type:'doughnut',
+		data:{
+			labels:["1","admin","apex","bcloud","corp","dev","feed","inet","prod","storage","tdmz"],
+			backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#00FFFF","#7FFF00","#008000","#87CEFA","#800000","#191970"],
+			datasets:[{
+				label:"Average uptime per hostname",
+				data:test
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Average uptime per hostname"
+			}
+		}
+	});
 }
