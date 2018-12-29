@@ -95,6 +95,7 @@ function averageGraph(areas,upTimes){
 	var temp=[];
 	var sums=[];
 	var counts=[];
+	var data=[];
 	for(var x=0;x<areas.length;x++){
 		temp.push(parseInt(upTimes[x]));
 	}
