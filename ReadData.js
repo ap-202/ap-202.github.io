@@ -135,6 +135,9 @@ function averageGraph(areas,upTimes){
 	for(var x=0;x<sums.length;x++){
 		gdata.push((sums[x]/counts[x]));
 	}
+	console.log(sums);
+	console.log(counts);
+	console.log(gdata);
 	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
 		type:'doughnut',
 		data:{
