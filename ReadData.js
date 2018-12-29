@@ -79,13 +79,7 @@ function dataRetrieved(data){
 		]
 	    } );
 	} );
-	averageGraph(areas,upTimes);
-	
-}
-function dataException(e){	
-	console.log(e);	 
-}
-function averageGraph(areas,upTimes){
+	//averageGraph(areas,upTimes);
 	var temp=[];
 	var sums=[];
 	var counts=[];
@@ -157,4 +151,10 @@ function averageGraph(areas,upTimes){
 			}
 		}
 	});
+}
+function dataException(e){	
+	console.log(e);	 
+}
+function averageGraph(areas,upTimes){
+
 }
