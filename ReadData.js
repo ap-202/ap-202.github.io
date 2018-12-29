@@ -89,7 +89,7 @@ function averageGraph(areas,upTimes){
 	var temp=[];
 	var sums=[];
 	var counts=[];
-	var data=[];
+	var gdata=[];
 	for(var x=0;x<areas.length;x++){
 		temp.push(parseInt(upTimes[x]));
 	}
@@ -130,7 +130,7 @@ function averageGraph(areas,upTimes){
 		}	
 	}
 	for(var x=0;x<sums.length;x++){
-		data.push((sums[x]/counts[x]));
+		gdata.push((sums[x]/counts[x]));
 	}
 	var graph = new Chart(document.getElementById("graph1").getContext('2d'),{
 		type:'doughnut',
@@ -139,7 +139,7 @@ function averageGraph(areas,upTimes){
 			backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#00FFFF","#7FFF00","#008000","#87CEFA","#800000","#191970"],
 			datasets:[{
 				label:"Average uptime per hostname",
-				data:data
+				data:gdata
 			}]
 		},
 		options:{
