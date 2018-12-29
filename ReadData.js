@@ -81,8 +81,8 @@ function dataRetrieved(data){
 	} );
 	//averageGraph(areas,upTimes);
 	var temp=[];
-	var sums=[];
-	var counts=[];
+	var sums=[0,0,0,0,0,0,0,0,0,0,0];
+	var counts=[0,0,0,0,0,0,0,0,0,0,0];
 	var gdata=[];
 	for(var x=0;x<areas.length;x++){
 		var hold = parseInt(upTimes[x])
@@ -90,8 +90,8 @@ function dataRetrieved(data){
 	}
 	for(var y=0;y<areas.length;y++){
 		if(areas[y]!=undefined){
-			console.log(areas[y]);
-			console.log(temp[y]);
+			//console.log(areas[y]);
+			//console.log(temp[y]);
 			if(areas[y]==('1')){
 				sums[0]+=temp[y];
 				counts[0]+=1;
