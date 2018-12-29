@@ -96,6 +96,8 @@ function averageGraph(areas,upTimes){
 	}
 	for(var y=0;y<areas.length;y++){
 		if(areas[x]!=undefined){
+			console.log(areas[x]);
+			console.log(temp[x]);
 			if(areas[x]==('1')){
 				sums[0]+=temp[x];
 				counts[0]+=1;
