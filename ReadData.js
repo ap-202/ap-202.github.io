@@ -95,40 +95,42 @@ function averageGraph(areas,upTimes){
 		temp.push(hold);
 	}
 	for(var y=0;y<areas.length;y++){
-		if(areas[x].localeCompare('1')==0){
-			sums[0]+=temp[x];
-			counts[0]+=1;
-		}else if(areas[x]==('admin')){
-			sums[1]+=temp[x];
-			counts[1]+=1;
-		}else if(areas[x]==('apex')){
-			sums[2]+=temp[x];
-			counts[2]+=1;
-		}else if(areas[x]==('bcloud')){
-			sums[3]+=temp[x];
-			counts[3]+=1;
-		}else if(areas[x]==('corp')){
-			sums[4]+=temp[x];
-			counts[4]+=1;
-		}else if(areas[x]==('dev')){
-			sums[5]+=temp[x];
-			counts[5]+=1;
-		}else if(areas[x]==('feed')){
-			sums[6]+=temp[x];
-			counts[6]+=1;
-		}else if(areas[x]==('inet')){
-			sums[7]+=temp[x];
-			counts[7]+=1;
-		}else if(areas[x]==('prod')){
-			sums[8]+=temp[x];
-			counts[8]+=1;
-		}else if(areas[x]==('storage')){
-			sums[9]+=temp[x];
-			counts[9]+=1;
-		}else if(areas[x]==('tdmz')){
-			sums[10]+=temp[x];
-			counts[10]+=1;
-		}	
+		if(areas[x]!=undefined){
+			if(areas[x]==('1')){
+				sums[0]+=temp[x];
+				counts[0]+=1;
+			}else if(areas[x]==('admin')){
+				sums[1]+=temp[x];
+				counts[1]+=1;
+			}else if(areas[x]==('apex')){
+				sums[2]+=temp[x];
+				counts[2]+=1;
+			}else if(areas[x]==('bcloud')){
+				sums[3]+=temp[x];
+				counts[3]+=1;
+			}else if(areas[x]==('corp')){
+				sums[4]+=temp[x];
+				counts[4]+=1;
+			}else if(areas[x]==('dev')){
+				sums[5]+=temp[x];
+				counts[5]+=1;
+			}else if(areas[x]==('feed')){
+				sums[6]+=temp[x];
+				counts[6]+=1;
+			}else if(areas[x]==('inet')){
+				sums[7]+=temp[x];
+				counts[7]+=1;
+			}else if(areas[x]==('prod')){
+				sums[8]+=temp[x];
+				counts[8]+=1;
+			}else if(areas[x]==('storage')){
+				sums[9]+=temp[x];
+				counts[9]+=1;
+			}else if(areas[x]==('tdmz')){
+				sums[10]+=temp[x];
+				counts[10]+=1;
+			}	
+		}
 	}
 	for(var x=0;x<sums.length;x++){
 		gdata.push((sums[x]/counts[x]));
