@@ -79,10 +79,203 @@ function dataRetrieved(data){
 		]
 	    } );
 	} );
+	lineGraphs(areas,upTimes);
 	averageGraph(areas,upTimes);
 }
 function dataException(e){	
 	console.log(e);	 
+}
+function lineGraphs(areas,upTimes){
+	var one =[];
+	var admin=[];
+	var apex=[];
+	var bcloud=[];
+	var corp=[];
+	var dev=[];
+	var feed=[];
+	var inet=[];
+	var prod=[];
+	var storage=[];
+	var tdmz=[];
+	for(var y=0;y<areas.length;y++){
+		if(areas[y]!=undefined){
+			//console.log(areas[y]);
+			//console.log(temp[y]);
+			if(areas[y]==('1')){
+				one.push(upTimes[y]);
+			}else if(areas[y]==('admin')){
+				admin.push(upTimes[y]);
+			}else if(areas[y]==('apex')){
+				apex.push(upTimes[y]);
+			}else if(areas[y]==('bcloud')){
+				bcloud.push(upTimes[y]);
+			}else if(areas[y]==('corp')){
+				corp.push(upTimes[y]);
+			}else if(areas[y]==('dev')){
+				dev.push(upTimes[y]);
+			}else if(areas[y]==('feed')){
+				feed.push(upTimes[y]);
+			}else if(areas[y]==('inet')){
+				inet.push(upTimes[y]);
+			}else if(areas[y]==('prod')){
+				prod.push(upTimes[y]);
+			}else if(areas[y]==('storage')){
+				storage.push(upTimes[y]);
+			}else if(areas[y]==('tdmz')){
+				tdmz.push(upTimes[y]);
+			}	
+		}
+	}
+	var adminGraph = new Chart(document.getElementById("adminGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:admin
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for admin"
+			}
+		}
+	});
+	var apexGraph = new Chart(document.getElementById("apexGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:apex
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for apex"
+			}
+		}
+	});
+	var bcloudGraph = new Chart(document.getElementById("bcloudGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:bcloud
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for bcloud"
+			}
+		}
+	});
+	var corpGraph = new Chart(document.getElementById("corpGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:corp
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for corp"
+			}
+		}
+	});
+	var devGraph = new Chart(document.getElementById("devGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:dev
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for admin"
+			}
+		}
+	});
+	var feedGraph = new Chart(document.getElementById("feedGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:feed
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for feed"
+			}
+		}
+	});
+	var inetGraph = new Chart(document.getElementById("inetGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:inet
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for inet"
+			}
+		}
+	});
+	var prodGraph = new Chart(document.getElementById("prodGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:prod
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for prod"
+			}
+		}
+	});
+	var storageGraph = new Chart(document.getElementById("storageGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:storage
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for storage"
+			}
+		}
+	});
+	var tdmzGraph = new Chart(document.getElementById("tdmzGraph").getContext('2d'),{
+		type:'line',
+		data:{
+			datasets:[{
+				//label:"Average uptime per area",
+				data:tdmz
+			}]
+		},
+		options:{
+			title:{
+				display:true,
+				text:"Uptime for tdmz"
+			}
+		}
+	});
 }
 function averageGraph(areas,upTimes){
 	var temp=[];
@@ -149,14 +342,14 @@ function averageGraph(areas,upTimes){
 			labels:["1","admin","apex","bcloud","corp","dev","feed","inet","prod","storage","tdmz"],
 			backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#00FFFF","#7FFF00","#008000","#87CEFA","#800000","#191970"],
 			datasets:[{
-				label:"Average uptime per hostname",
+				label:"Average uptime per area",
 				data:gdata
 			}]
 		},
 		options:{
 			title:{
 				display:true,
-				text:"Average uptime per hostname"
+				text:"Average uptime per area"
 			}
 		}
 	});
@@ -166,14 +359,14 @@ function averageGraph(areas,upTimes){
 			labels:["1","admin","apex","bcloud","corp","dev","feed","inet","prod","storage","tdmz"],
 			backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#00FFFF","#7FFF00","#008000","#87CEFA","#800000","#191970"],
 			datasets:[{
-				label:"Average uptime per hostname",
+				label:"Average uptime per area",
 				data:gdata
 			}]
 		},
 		options:{
 			title:{
 				display:true,
-				text:"Average uptime per hostname"
+				text:"Average uptime per area"
 			}
 		}
 	});
