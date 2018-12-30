@@ -151,7 +151,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[1],
 			datasets:[{
 				data:admin,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -173,7 +173,7 @@ function lineGraphs(areas,upTimes){
 		
 			datasets:[{
 				data:apex,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -193,7 +193,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[3],
 			datasets:[{
 				data:bcloud,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -215,7 +215,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[4],
 			datasets:[{
 				data:corp,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -235,7 +235,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[5],
 			datasets:[{
 				data:dev,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -255,7 +255,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[6],
 			datasets:[{
 				data:feed,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -275,7 +275,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[7],
 			datasets:[{
 				data:inet,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -295,7 +295,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[8],
 			datasets:[{
 				data:prod,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -315,7 +315,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[9],
 			datasets:[{
 				data:storage,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
@@ -335,7 +335,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[10],
 			datasets:[{
 				data:tdmz,
-				borderColor: "#3e95cd",
+				borderColor: "#e59191",
        				fill: false
 			}]
 		},
