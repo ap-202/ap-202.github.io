@@ -146,10 +146,12 @@ function lineGraphs(areas,upTimes){
 	}
 	var adminGraph = new Chart(document.getElementById("adminGraph").getContext('2d'),{
 		type:'line',
+		backgroundColor:"#E59191",
 		data:{
+			borderColor:"#C94848",
 			labels:lengths[1],
 			datasets:[{
-				//label:"Average uptime per area",
+				label:"Average uptime per area",
 				data:admin
 			}]
 		},
@@ -162,8 +164,10 @@ function lineGraphs(areas,upTimes){
 	});
 	var apexGraph = new Chart(document.getElementById("apexGraph").getContext('2d'),{
 		type:'line',
+		borderColor:"#C94848",
 		data:{
 			labels:lengths[2],
+			backgroundColor:"#E59191",
 			datasets:[{
 				//label:"Average uptime per area",
 				data:apex
@@ -186,6 +190,8 @@ function lineGraphs(areas,upTimes){
 			}]
 		},
 		options:{
+			borderColor:"#C94848",
+			backgroundColor:"#E59191",
 			title:{
 				display:true,
 				text:"Uptime for bcloud"
