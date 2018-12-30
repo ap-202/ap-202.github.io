@@ -141,7 +141,7 @@ function lineGraphs(areas,upTimes){
 	var adminGraph = new Chart(document.getElementById("adminGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[1],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:admin
@@ -157,7 +157,7 @@ function lineGraphs(areas,upTimes){
 	var apexGraph = new Chart(document.getElementById("apexGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[2],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:apex
@@ -173,7 +173,7 @@ function lineGraphs(areas,upTimes){
 	var bcloudGraph = new Chart(document.getElementById("bcloudGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[3],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:bcloud
@@ -189,7 +189,7 @@ function lineGraphs(areas,upTimes){
 	var corpGraph = new Chart(document.getElementById("corpGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[4],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:corp
@@ -205,7 +205,7 @@ function lineGraphs(areas,upTimes){
 	var devGraph = new Chart(document.getElementById("devGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[5],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:dev
@@ -221,7 +221,7 @@ function lineGraphs(areas,upTimes){
 	var feedGraph = new Chart(document.getElementById("feedGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[6],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:feed
@@ -237,7 +237,7 @@ function lineGraphs(areas,upTimes){
 	var inetGraph = new Chart(document.getElementById("inetGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[7],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:inet
@@ -253,7 +253,7 @@ function lineGraphs(areas,upTimes){
 	var prodGraph = new Chart(document.getElementById("prodGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[8],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:prod
@@ -269,7 +269,7 @@ function lineGraphs(areas,upTimes){
 	var storageGraph = new Chart(document.getElementById("storageGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[9],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:storage
@@ -285,7 +285,7 @@ function lineGraphs(areas,upTimes){
 	var tdmzGraph = new Chart(document.getElementById("tdmzGraph").getContext('2d'),{
 		type:'line',
 		data:{
-			labels:xval,
+			labels:counts[10],
 			datasets:[{
 				//label:"Average uptime per area",
 				data:tdmz
