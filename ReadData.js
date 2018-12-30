@@ -97,36 +97,44 @@ function lineGraphs(areas,upTimes){
 	var prod=[];
 	var storage=[];
 	var tdmz=[];
-	var xval=[];
-	for(var x=1;x<areas.length+1;x++){
-		xval.push(x);
-	}
+	var counts=[0,0,0,0,0,0,0,0,0,0,0];
 	for(var y=0;y<areas.length;y++){
 		if(areas[y]!=undefined){
 			//console.log(areas[y]);
 			//console.log(temp[y]);
 			if(areas[y]==('1')){
 				one.push(upTimes[y]);
+				counts[0]+=1;
 			}else if(areas[y]==('admin')){
 				admin.push(upTimes[y]);
+				counts[1]+=1;
 			}else if(areas[y]==('apex')){
 				apex.push(upTimes[y]);
+				counts[2]+=1;
 			}else if(areas[y]==('bcloud')){
 				bcloud.push(upTimes[y]);
+				counts[3]+=1;
 			}else if(areas[y]==('corp')){
 				corp.push(upTimes[y]);
+				counts[4]+=1;
 			}else if(areas[y]==('dev')){
 				dev.push(upTimes[y]);
+				counts[5]+=1;
 			}else if(areas[y]==('feed')){
 				feed.push(upTimes[y]);
+				counts[6]+=1;
 			}else if(areas[y]==('inet')){
 				inet.push(upTimes[y]);
+				counts[7]+=1;
 			}else if(areas[y]==('prod')){
 				prod.push(upTimes[y]);
+				counts[8]+=1;
 			}else if(areas[y]==('storage')){
 				storage.push(upTimes[y]);
+				counts[9]+=1;
 			}else if(areas[y]==('tdmz')){
 				tdmz.push(upTimes[y]);
+				counts[10]+=1;
 			}	
 		}
 	}
