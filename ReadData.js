@@ -146,19 +146,22 @@ function lineGraphs(areas,upTimes){
 	}
 	var adminGraph = new Chart(document.getElementById("adminGraph").getContext('2d'),{
 		type:'line',
-		backgroundColor:"#E59191",
 		data:{
 			borderColor:"#C94848",
 			labels:lengths[1],
 			datasets:[{
-				label:"Average uptime per area",
-				data:admin
+				data:admin,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for admin"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -167,16 +170,20 @@ function lineGraphs(areas,upTimes){
 		borderColor:"#C94848",
 		data:{
 			labels:lengths[2],
-			backgroundColor:"#E59191",
+		
 			datasets:[{
-				//label:"Average uptime per area",
-				data:apex
+				data:apex,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for apex"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -185,8 +192,9 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[3],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:bcloud
+				data:bcloud,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
@@ -195,6 +203,9 @@ function lineGraphs(areas,upTimes){
 			title:{
 				display:true,
 				text:"Uptime for bcloud"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -203,14 +214,18 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[4],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:corp
+				data:corp,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for corp"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -219,14 +234,18 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[5],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:dev
+				data:dev,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for dev"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -235,14 +254,18 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[6],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:feed
+				data:feed,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for feed"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -251,14 +274,18 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[7],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:inet
+				data:inet,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for inet"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -267,14 +294,18 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[8],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:prod
+				data:prod,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for prod"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -283,14 +314,18 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[9],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:storage
+				data:storage,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for storage"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
@@ -299,14 +334,18 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[10],
 			datasets:[{
-				//label:"Average uptime per area",
-				data:tdmz
+				data:tdmz,
+				borderColor: "#3e95cd",
+       				fill: false
 			}]
 		},
 		options:{
 			title:{
 				display:true,
 				text:"Uptime for tdmz"
+			},
+			legend:{
+				display:false
 			}
 		}
 	});
