@@ -97,6 +97,7 @@ function lineGraphs(areas,upTimes){
 	var prod=[];
 	var storage=[];
 	var tdmz=[];
+	console.log(admin);
 	for(var y=0;y<areas.length;y++){
 		if(areas[y]!=undefined){
 			//console.log(areas[y]);
