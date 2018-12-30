@@ -413,9 +413,9 @@ function averageGraph(areas,upTimes){
 		type:'doughnut',
 		data:{
 			labels:["1","admin","apex","bcloud","corp","dev","feed","inet","prod","storage","tdmz"],
-			backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#00FFFF","#7FFF00","#008000","#87CEFA","#800000","#191970"],
 			datasets:[{
 				label:"Average uptime per area",
+				backgroundColor:["#7b68ee", "#dda0dd","#3cba9f","#7fffd4","#7cfc00","#00ffff","#7fff00","#008000","#87cefa","#800000","#191970"],
 				data:gdata
 			}]
 		},
@@ -430,9 +430,9 @@ function averageGraph(areas,upTimes){
 		type:'bar',
 		data:{
 			labels:["1","admin","apex","bcloud","corp","dev","feed","inet","prod","storage","tdmz"],
-			backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#00FFFF","#7FFF00","#008000","#87CEFA","#800000","#191970"],
 			datasets:[{
 				label:"Average uptime per area",
+				backgroundColor:["#7b68ee", "#dda0dd","#3cba9f","#7fffd4","#7cfc00","#00ffff","#7fff00","#008000","#87cefa","#800000","#191970"],
 				data:gdata
 			}]
 		},
