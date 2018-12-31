@@ -404,7 +404,7 @@ function averageGraph(areas,upTimes){
 		}
 	}
 	for(var x=0;x<sums.length;x++){
-		gdata.push((sums[x]/counts[x]));
+		gdata.push(Math.round(sums[x]/counts[x]));
 	}
 	console.log(sums);
 	console.log(counts);
