@@ -1,7 +1,6 @@
-html {
-    scroll-behavior: smooth;
-  }
+.table1{
+    padding:2%;
+}
 .row{
-    width:90%;
-    height:75vh
+    padding:2%;
 }
