@@ -151,7 +151,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[1],
 			datasets:[{
 				data:admin,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -173,7 +173,7 @@ function lineGraphs(areas,upTimes){
 		
 			datasets:[{
 				data:apex,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -193,7 +193,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[3],
 			datasets:[{
 				data:bcloud,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -215,7 +215,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[4],
 			datasets:[{
 				data:corp,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -235,7 +235,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[5],
 			datasets:[{
 				data:dev,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -255,7 +255,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[6],
 			datasets:[{
 				data:feed,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -275,7 +275,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[7],
 			datasets:[{
 				data:inet,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -295,7 +295,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[8],
 			datasets:[{
 				data:prod,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -315,7 +315,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[9],
 			datasets:[{
 				data:storage,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -335,7 +335,7 @@ function lineGraphs(areas,upTimes){
 			labels:lengths[10],
 			datasets:[{
 				data:tdmz,
-				borderColor: "#e59191",
+				borderColor: "#007bff",
        				fill: false
 			}]
 		},
@@ -404,7 +404,7 @@ function averageGraph(areas,upTimes){
 		}
 	}
 	for(var x=0;x<sums.length;x++){
-		gdata.push(Math.round(sums[x]/counts[x]));
+		gdata.push((sums[x]/counts[x]));
 	}
 	console.log(sums);
 	console.log(counts);
@@ -415,7 +415,7 @@ function averageGraph(areas,upTimes){
 			labels:["1","admin","apex","bcloud","corp","dev","feed","inet","prod","storage","tdmz"],
 			datasets:[{
 				label:"Average uptime per area",
-				backgroundColor:["#f0f8ff", "#dda0dd","#3cba9f","#7fffd4","#7cfc00","#7b68ee","#f0e68c","#ff6347","#87cefa","#800000","#191970"],
+				backgroundColor:["#e0ffff", "#00ffff","#7fffd4","#00ced1","#add8e6","#87cefa","#00bfff","#1e90ff","#4169e1","#0000cd","#191970"],
 				data:gdata
 			}]
 		},
@@ -431,7 +431,7 @@ function averageGraph(areas,upTimes){
 		data:{
 			labels:["1","admin","apex","bcloud","corp","dev","feed","inet","prod","storage","tdmz"],
 			datasets:[{
-				backgroundColor:["#f0f8ff", "#dda0dd","#3cba9f","#7fffd4","#7cfc00","#7b68ee","#f0e68c","#ff6347","#87cefa","#800000","#191970"],
+				backgroundColor:["#e0ffff", "#00ffff","#7fffd4","#00ced1","#add8e6","#87cefa","#00bfff","#1e90ff","#4169e1","#0000cd","#191970"],
 				data:gdata
 			}]
 		},
