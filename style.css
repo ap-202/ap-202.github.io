@@ -1,0 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+.row{
+    width:90%;
+    height:75vh
+}
