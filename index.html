@@ -14,13 +14,18 @@
 		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
 		<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" type="text/css"></link>
 		<link rel ="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" type="text/css"></link>
+		<link rel ="stylesheet" href="style.css"></link>
 
+		<table id="table1" class="display"></table>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg">
-					<table id="table1" class="display"></table>
-				</div>	
-			</div>	
+					<canvas id="avgGraph1"></canvas>
+				</div>
+				<div class="col-lg">
+					<canvas id="avgGraph2"></canvas>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-lg">
 					<canvas id="adminGraph"></canvas>
@@ -59,14 +64,6 @@
 				</div>
 				<div class="col-lg">
 					<canvas id="tdmzGraph"></canvas>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg">
-					<canvas id="avgGraph1"></canvas>
-				</div>
-				<div class="col-lg">
-					<canvas id="avgGraph2"></canvas>
 				</div>
 			</div>
 		</div>
