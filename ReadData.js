@@ -133,7 +133,7 @@ function lineGraphs(areas,upTimes){
 
 	}
 	for(var c=0;c<AreasDisplay.length;c++){
-		while(lengths[c].length>250){
+		while(lengths[c].length>200){
 			lengths[c].shift();
 			AreasDisplay[c].shift();
 		}
