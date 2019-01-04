@@ -84,7 +84,7 @@ function dataException(e){
 	console.log(e);	 
 }
 function lineGraphs(areas,upTimes){
-	var areasDisplay=[[],[],[],[],[],[],[],[],[],[],[]];
+	var AreasDisplay=[[],[],[],[],[],[],[],[],[],[],[]];
 	var counts=[0,0,0,0,0,0,0,0,0,0,0];
 	var lengths=[[],[],[],[],[],[],[],[],[],[],[]];
 	for(var y=0;y<areas.length;y++){
@@ -132,10 +132,10 @@ function lineGraphs(areas,upTimes){
 		}
 
 	}
-	for(var c=0;c<areasDisplay.length;c++){
+	for(var c=0;c<AreasDisplay.length;c++){
 		while(lengths[c].length>250){
 			lengths[c].shift();
-			areasDisplay[c].shift();
+			AreasDisplay[c].shift();
 		}
 		
 	}
