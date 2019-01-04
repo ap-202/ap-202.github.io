@@ -139,7 +139,7 @@ function lineGraphs(areas,upTimes){
 			}	
 		}
 	}
-	int c=0;
+	var c=0;
 	for(var z=0;z<counts.length;z++){
 		if(counts[z]/4<250){
 			for(var a=0; a<counts[z];a++){
