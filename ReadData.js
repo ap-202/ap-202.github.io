@@ -141,25 +141,12 @@ function lineGraphs(areas,upTimes){
 	}
 	var c=0;
 	for(var z=0;z<counts.length;z++){
-		if(counts[z]<250){
-			for(var a=0; a<counts[z];a++){
-				lengths[z].push(a);
-			}
-		}else{
-			for(var a=0; a<counts[z];a++){
-				if(c!=4){
-					lengths[z].push(a);
-					c++;
-				}
-				else{
-					c=0;
-				}
-			}
+		for(var a=0; a<counts[z];a++){
+			lengths[z].push(a);
 		}
+
 	}
-	for(var g=0;g<lengths.length;g++){
-		
-	}
+
 	var adminGraph = new Chart(document.getElementById("adminGraph").getContext('2d'),{
 		type:'line',
 		data:{
