@@ -157,7 +157,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var apexGraph = new Chart(document.getElementById("apexGraph").getContext('2d'),{
@@ -178,7 +185,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var bcloudGraph = new Chart(document.getElementById("bcloudGraph").getContext('2d'),{
@@ -200,7 +214,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var corpGraph = new Chart(document.getElementById("corpGraph").getContext('2d'),{
@@ -220,7 +241,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var devGraph = new Chart(document.getElementById("devGraph").getContext('2d'),{
@@ -240,7 +268,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var feedGraph = new Chart(document.getElementById("feedGraph").getContext('2d'),{
@@ -260,7 +295,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var inetGraph = new Chart(document.getElementById("inetGraph").getContext('2d'),{
@@ -280,7 +322,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var prodGraph = new Chart(document.getElementById("prodGraph").getContext('2d'),{
@@ -300,7 +349,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var storageGraph = new Chart(document.getElementById("storageGraph").getContext('2d'),{
@@ -320,7 +376,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 	var tdmzGraph = new Chart(document.getElementById("tdmzGraph").getContext('2d'),{
@@ -340,7 +403,14 @@ function lineGraphs(areas,upTimes){
 			},
 			legend:{
 				display:false
-			}
+			},
+			yAxes: [{
+				ticks: {
+					min: 0,
+					max: 3000,
+					stepSize: 500
+				}
+			}]
 		}
 	});
 }
