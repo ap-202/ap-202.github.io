@@ -359,8 +359,6 @@ function averageGraph(areas,upTimes){
 	}
 	for(var y=0;y<areas.length;y++){
 		if(areas[y]!=undefined){
-			//console.log(areas[y]);
-			//console.log(temp[y]);
 			if(areas[y]==('1')){
 				sums[0]+=temp[y];
 				counts[0]+=1;
@@ -398,7 +396,7 @@ function averageGraph(areas,upTimes){
 		}
 	}
 	for(var x=0;x<sums.length;x++){
-		gdata.push((sums[x]/counts[x]));
+		gdata.push(Math.round(sums[x]/counts[x]));
 	}
 	console.log(sums);
 	console.log(counts);
