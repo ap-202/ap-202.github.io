@@ -55,7 +55,6 @@ function dataRetrieved(data){
 	console.log(upTimes);
 	console.log(versions);
 	
-	//2D Array -->(area, hostname, uptime, version)
 	for(var y=0;y<keys.length;y++){
 		tableData.push([
 			areas[y],
@@ -67,7 +66,6 @@ function dataRetrieved(data){
 
 	console.log(tableData);
 	
-	//Create Datatable 
 	$(document).ready(function() {
 	    $("#table1").DataTable( {
 		data: tableData,
@@ -86,74 +84,68 @@ function dataException(e){
 	console.log(e);	 
 }
 function lineGraphs(areas,upTimes){
-	var one =[];
-	var admin=[];
-	var apex=[];
-	var bcloud=[];
-	var corp=[];
-	var dev=[];
-	var feed=[];
-	var inet=[];
-	var prod=[];
-	var storage=[];
-	var tdmz=[];
+	var areasDisplay=[[],[],[],[],[],[],[],[],[],[],[]];
 	var counts=[0,0,0,0,0,0,0,0,0,0,0];
 	var lengths=[[],[],[],[],[],[],[],[],[],[],[]];
 	for(var y=0;y<areas.length;y++){
 		if(areas[y]!=undefined){
-			//console.log(areas[y]);
-			//console.log(temp[y]);
 			if(areas[y]==('1')){
-				one.push(upTimes[y]);
+				AreasDisplay[0].push(upTimes[y]);
 				counts[0]+=1;
 			}else if(areas[y]==('admin')){
-				admin.push(upTimes[y]);
+				AreasDisplay[1].push(upTimes[y]);
 				counts[1]+=1;
 			}else if(areas[y]==('apex')){
-				apex.push(upTimes[y]);
+				AreasDisplay[2].push(upTimes[y]);
 				counts[2]+=1;
 			}else if(areas[y]==('bcloud')){
-				bcloud.push(upTimes[y]);
+				AreasDisplay[3].push(upTimes[y]);
 				counts[3]+=1;
 			}else if(areas[y]==('corp')){
-				corp.push(upTimes[y]);
+				AreasDisplay[4].push(upTimes[y]);
 				counts[4]+=1;
 			}else if(areas[y]==('dev')){
-				dev.push(upTimes[y]);
+				AreasDisplay[5].push(upTimes[y]);
 				counts[5]+=1;
 			}else if(areas[y]==('feed')){
-				feed.push(upTimes[y]);
+				AreasDisplay[6].push(upTimes[y]);
 				counts[6]+=1;
 			}else if(areas[y]==('inet')){
-				inet.push(upTimes[y]);
+				AreasDisplay[7].push(upTimes[y]);
 				counts[7]+=1;
 			}else if(areas[y]==('prod')){
-				prod.push(upTimes[y]);
+				AreasDisplay[8].push(upTimes[y]);
 				counts[8]+=1;
 			}else if(areas[y]==('storage')){
-				storage.push(upTimes[y]);
+				AreasDisplay[9].push(upTimes[y]);
 				counts[9]+=1;
 			}else if(areas[y]==('tdmz')){
-				tdmz.push(upTimes[y]);
+				AreasDisplay[10].push(upTimes[y]);
 				counts[10]+=1;
 			}	
 		}
 	}
-	var c=0;
+	
 	for(var z=0;z<counts.length;z++){
 		for(var a=0; a<counts[z];a++){
 			lengths[z].push(a);
 		}
 
 	}
-
+	for(var c=0;c<areasDisplay.length;c++){
+		while(lengths[c].length>250){
+			lengths[c].shift();
+			areasDisplay[c].shift();
+		}
+		
+	}
 	var adminGraph = new Chart(document.getElementById("adminGraph").getContext('2d'),{
 		type:'line',
 		data:{
 			borderColor:"#C94848",
 			labels:lengths[1],
 			datasets:[{
-				data:admin,
+				data:AreasDisplay[1],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -173,9 +165,8 @@ function lineGraphs(areas,upTimes){
 		borderColor:"#C94848",
 		data:{
 			labels:lengths[2],
-		
 			datasets:[{
-				data:apex,
+				data:AreasDisplay[2],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -195,7 +186,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[3],
 			datasets:[{
-				data:bcloud,
+				data:AreasDisplay[3],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -217,7 +208,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[4],
 			datasets:[{
-				data:corp,
+				data:AreasDisplay[4],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -237,7 +228,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[5],
 			datasets:[{
-				data:dev,
+				data:AreasDisplay[5],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -257,7 +248,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[6],
 			datasets:[{
-				data:feed,
+				data:AreasDisplay[6],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -277,7 +268,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[7],
 			datasets:[{
-				data:inet,
+				data:AreasDisplay[7],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -297,7 +288,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[8],
 			datasets:[{
-				data:prod,
+				data:AreasDisplay[8],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -317,7 +308,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[9],
 			datasets:[{
-				data:storage,
+				data:AreasDisplay[9],
 				borderColor: "#007bff",
        				fill: false
 			}]
@@ -337,7 +328,7 @@ function lineGraphs(areas,upTimes){
 		data:{
 			labels:lengths[10],
 			datasets:[{
-				data:tdmz,
+				data:AreasDisplay[10],
 				borderColor: "#007bff",
        				fill: false
 			}]
